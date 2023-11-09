@@ -26,14 +26,4 @@ fi
 echo "Configuring AWS CLI..."
 aws configure
 
-# Install AWS SAM CLI
-echo "Installing AWS SAM CLI..."
-if ! command -v sam &>/dev/null; then
-    echo "AWS SAM CLI not found. Installing AWS SAM CLI..."
-    brew tap aws/tap
-    brew install aws-sam-cli
-else
-    echo "AWS SAM CLI is already installed."
-fi
-
 echo "Setup completed!"
